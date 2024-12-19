@@ -2,22 +2,22 @@ let currentPlayer = 'X';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let gameOver = false;
 
-// Select all the cells
+
 const cells = document.querySelectorAll('.cell');
 const statusText = document.getElementById('status');
 const resetButton = document.getElementById('resetBtn');
-const excitedSpinGif = document.getElementById('excitedSpinGif'); // The excited spin GIF
+const excitedSpinGif = document.getElementById('excitedSpinGif'); 
 
-// Add event listeners to the cells
+
 cells.forEach(cell => {
     cell.addEventListener('click', handleCellClick);
 });
 
-// Handle cell click
+
 function handleCellClick(event) {
     const cellIndex = event.target.dataset.index;
     
-    if (gameBoard[cellIndex] || gameOver) return; // If the cell is already clicked or game is over
+    if (gameBoard[cellIndex] || gameOver) return; 
     
     gameBoard[cellIndex] = currentPlayer;
     event.target.textContent = currentPlayer;
@@ -25,16 +25,16 @@ function handleCellClick(event) {
     if (checkWinner()) {
         statusText.textContent = `${currentPlayer} wins!`;
         gameOver = true;
-        excitedSpinGif.style.display = 'block'; // Show the excited spin GIF when there's a winner
+        excitedSpinGif.style.display = 'block'; 
     } else if (gameBoard.every(cell => cell !== '')) {
         statusText.textContent = "It's a draw!";
         gameOver = true;
     } else {
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Switch player
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; 
     }
 }
 
-// Check if there's a winner
+
 function checkWinner() {
     const winningCombinations = [
         [0, 1, 2],
@@ -53,12 +53,12 @@ function checkWinner() {
     });
 }
 
-// Restart the game
+
 resetButton.addEventListener('click', () => {
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     gameOver = false;
     currentPlayer = 'X';
     statusText.textContent = '';
-    excitedSpinGif.style.display = 'none'; // Hide the excited spin GIF when the game restarts
+    excitedSpinGif.style.display = 'none'; 
     cells.forEach(cell => cell.textContent = '');
 });
