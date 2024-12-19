@@ -1,0 +1,111 @@
+/* Body and page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #50134f; 
+    color: beige;/* Dark background for the nav */
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #5dc655; /* Change color on hover */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Tic Tac Toe Heading Box */
+h1 {
+    background-color: #5dc655; /* Green background */
+    color: white; /* White text */
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+/* Game Board Styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Game Cell Styling */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ae199a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 1px solid #000000;
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #5dc655;
+    color: rgb(0, 0, 0);
+    border: black;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(239, 239, 239, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green when hovered */
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Excited Spin GIF */
+#excitedSpinGif {
+    margin-top: 20px;
+    width: 200px;
+    display: none; /* Initially hidden */
+}
+
