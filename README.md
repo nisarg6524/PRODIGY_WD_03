@@ -16,6 +16,6 @@ A fun and interactive web-based Tic Tac Toe game that allows two players to comp
 2. **CSS:** Styling for an attractive and intuitive user interface.
 3. **JavaScript:** Game logic, interactivity, and player turn management.
 
-[live Demo](http://127.0.0.1:5500/index.html)
+
 
 
